@@ -190,6 +190,24 @@ mixin HomePageMixin {
                 ),
               ],
             ),
+            const SizedBox(height: 20),
+            Expanded(
+              child: Container(
+                width: 300,
+                height: 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset('assets/images/card.png'),
+                    const SizedBox(height: 10),
+                    const Text('INDUSTRY', style: TextStyle(color: Colors.blue, fontFamily: 'Rajdhani', fontSize: 15)),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
