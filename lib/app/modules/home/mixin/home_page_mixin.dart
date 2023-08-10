@@ -102,12 +102,12 @@ mixin HomePageMixin {
       color: Colors.white,
       height: 500,
       child: Padding(
-        padding: const EdgeInsets.only(left: 100, right: 100, top: 100),
+        padding: const EdgeInsets.only(left: 100, right: 100, top: 50),
         child: Row(
           children: [
             Image.asset('assets/images/painel.png', width: 250),
             Padding(
-              padding: const EdgeInsets.only(left: 50, top: 50),
+              padding: const EdgeInsets.only(left: 50, top: 90),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -152,7 +152,7 @@ mixin HomePageMixin {
       color: Colors.white,
       height: 500,
       child: Padding(
-        padding: const EdgeInsets.only(left: 100, right: 100, top: 100),
+        padding: const EdgeInsets.only(left: 100, right: 100, top: 50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -190,27 +190,58 @@ mixin HomePageMixin {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
-            Expanded(
-              child: Container(
-                width: 300,
-                height: 100,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.asset('assets/images/card.png'),
-                    const SizedBox(height: 10),
-                    const Text('INDUSTRY', style: TextStyle(color: Colors.blue, fontFamily: 'Rajdhani', fontSize: 15)),
-                  ],
-                ),
+            const SizedBox(height: 35),
+            SizedBox(
+              height: 400,
+              child: ListView.separated(
+                itemCount: 3,
+                scrollDirection: Axis.horizontal,
+                separatorBuilder: (context, index) => const SizedBox(width: 100),
+                padding: const EdgeInsets.only(left: 40),
+                itemBuilder: (context, index) {
+                  return Container(
+                    width: 300,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset('assets/images/card.png'),
+                          const SizedBox(height: 20),
+                          const Text('INDUSTRY', style: TextStyle(color: Colors.blue, fontFamily: 'Rajdhani', fontSize: 15)),
+                          const SizedBox(height: 10),
+                          const Text('Advanced Distribution\nManagement Solutions ', style: TextStyle(color: Colors.black, fontFamily: 'Rajdhani', fontSize: 20)),
+                          const SizedBox(height: 10),
+                          const Text('Distribution management systems\nfor the modern grid.', style: TextStyle(color: Colors.black, fontFamily: 'Rajdhani', fontSize: 15)),
+                          const SizedBox(height: 25),
+                          Row(
+                            children: [
+                              const Text('Learn More', style: TextStyle(color: Colors.black, fontFamily: 'Rajdhani')),
+                              Container(
+                                width: 50,
+                                height: 20,
+                                decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white, border: Border.all(color: Colors.blue)),
+                                child: const Icon(Icons.arrow_forward_outlined, color: Colors.blue, size: 13),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  );
+                },
               ),
-            ),
+            )
           ],
         ),
       ),
+    );
+  }
+
+  Widget homePageFire() {
+    return Container(
+      width: 20,
+      color: Colors.white,
     );
   }
 

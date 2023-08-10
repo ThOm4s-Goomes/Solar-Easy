@@ -27,6 +27,7 @@ class _HomePageSolarEaseState extends State<HomePageSolarEase> with HomePageMixi
                     homePageOneWeb(),
                     homePageTwoWeb(),
                     homePageTreWeb(),
+                    homePageFire(),
                   ],
                 ),
               )
