@@ -14,6 +14,6 @@ class SolarEaseResponsiveLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return constraints.maxWidth < 800 ? mobile : web;
+    return constraints.maxWidth < 900 ? mobile : web;
   }
 }

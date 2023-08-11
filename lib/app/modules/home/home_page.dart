@@ -24,8 +24,8 @@ class _HomePageSolarEaseState extends State<HomePageSolarEase> with HomePageMixi
                 child: PageView(
                   scrollDirection: Axis.vertical,
                   children: [
-                    homePageOneWeb(),
-                    homePageTwoWeb(),
+                    homePageOneWeb(context),
+                    homePageTwoWeb(context),
                     homePageTreWeb(),
                     homePageFire(),
                   ],
